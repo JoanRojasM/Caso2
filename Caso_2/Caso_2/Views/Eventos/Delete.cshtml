@@ -1,0 +1,14 @@
+﻿@model Caso_2.Models.Evento
+
+<h2>Eliminar Evento</h2>
+
+<div class="alert alert-danger">
+    <p>¿Estás seguro de que deseas eliminar el siguiente evento?</p>
+    <p><strong>@Model.Titulo</strong></p>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

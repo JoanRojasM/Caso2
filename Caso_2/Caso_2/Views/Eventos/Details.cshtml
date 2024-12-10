@@ -1,0 +1,20 @@
+﻿@model Caso_2.Models.Evento
+
+<div class="card">
+    <div class="card-header">
+        <h4>@Model.Titulo</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Descripción:</strong> @Model.Descripcion</p>
+        <p><strong>Fecha:</strong> @Model.Fecha.ToShortDateString()</p>
+        <p><strong>Hora:</strong> @Model.Hora.ToString("hh\\:mm")</p>
+        <p><strong>Duración:</strong> @Model.Duracion horas</p>
+        <p><strong>Ubicación:</strong> @Model.Ubicacion</p>
+        <p><strong>Cupo Máximo:</strong> @Model.CupoMaximo</p>
+        <p><strong>Categoría:</strong> @Model.Categoria.Nombre</p>
+    </div>
+    <div class="card-footer text-end">
+        <a href="@Url.Action("Edit", new { id = Model.Id })" class="btn btn-primary">Editar</a>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Regresar</a>
+    </div>
+</div>

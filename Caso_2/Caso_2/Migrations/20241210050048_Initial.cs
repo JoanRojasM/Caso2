@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Caso_2.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -32,6 +32,9 @@ namespace Caso_2.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    NombreCompleto = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Rol = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -50,6 +53,23 @@ namespace Caso_2.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Categorias",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    Estado = table.Column<bool>(type: "bit", nullable: false),
+                    FechaRegistro = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()"),
+                    UsuarioRegistro = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categorias", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -158,6 +178,33 @@ namespace Caso_2.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Eventos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Titulo = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    CategoriaId = table.Column<int>(type: "int", nullable: false),
+                    Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Hora = table.Column<TimeSpan>(type: "time", nullable: false),
+                    Duracion = table.Column<int>(type: "int", nullable: false),
+                    Ubicacion = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    CupoMaximo = table.Column<int>(type: "int", nullable: false),
+                    FechaRegistro = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Eventos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Eventos_Categorias_CategoriaId",
+                        column: x => x.CategoriaId,
+                        principalTable: "Categorias",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
@@ -170,12 +217,12 @@ namespace Caso_2.Migrations
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
-                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NombreCompleto", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Rol", "SecurityStamp", "Telefono", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "1", 0, "c8b767d4-b132-43c2-a09e-db55f96dca87", "admin@example.com", true, false, null, "ADMIN@EXAMPLE.COM", "ADMIN@EXAMPLE.COM", "AQAAAAIAAYagAAAAEIxiqtqsXex4/rTSb3MDPVe4QOxKpZPoG686Rd/Z+z9qMHLYHNIY64RSeddc6kqY2Q==", null, false, "2f5786f0-b5f9-4b3e-9ef1-4df972489c13", false, "admin@example.com" },
-                    { "2", 0, "31fc0b16-4b5c-418a-a8d7-3ffea2a35f4d", "organizador@example.com", true, false, null, "ORGANIZADOR@EXAMPLE.COM", "ORGANIZADOR@EXAMPLE.COM", "AQAAAAIAAYagAAAAEIdXfLyhpCO9qv2n2MLoOr9FBjtOMJLWe/irgqo7VaFk2fx/ubbUJhdiD+EEgJb3kA==", null, false, "34117bb5-e342-4c50-b0b3-51f59fbd4d22", false, "organizador@example.com" },
-                    { "3", 0, "1de72616-7435-42b6-bc7b-e8b78cd8c3a2", "usuario@example.com", true, false, null, "USUARIO@EXAMPLE.COM", "USUARIO@EXAMPLE.COM", "AQAAAAIAAYagAAAAEA56lRg1RTQ0xCkFxGtjKWK0mBLwrIdSIjpVcS7SPmhmYLM5AyJsGx6sUvHVbSUDeA==", null, false, "ac5f0d40-5d68-4d0e-9839-d98384427da2", false, "usuario@example.com" }
+                    { "1", 0, "0bd1bf5a-4399-484d-8428-d2123fb15062", "admin@example.com", true, false, null, "Administrador General", "ADMIN@EXAMPLE.COM", "ADMIN@EXAMPLE.COM", "AQAAAAIAAYagAAAAECsvjrfX23gMmpBSdGk2p4LTWbo3xgrlNh+jww1yhEAeQcGtnvYEcXmv1kIOxUHv0w==", null, false, "Administrador", "96444f05-b1ee-425d-bdf4-593fbecbac35", "123456789", false, "admin@example.com" },
+                    { "2", 0, "602b3d62-609d-4af0-9302-62894c349557", "organizador@example.com", true, false, null, "Organizador Evento", "ORGANIZADOR@EXAMPLE.COM", "ORGANIZADOR@EXAMPLE.COM", "AQAAAAIAAYagAAAAEAvfy3lCRBZLxfCK1xyKuvBA/oxF11NcNNN5JE6q/PJhemrQzgJWBUyZkb7YLEvvlw==", null, false, "Organizador", "37428f36-e546-4db4-8743-d90a4bc6eeb1", "987654321", false, "organizador@example.com" },
+                    { "3", 0, "1656a7fa-f655-4972-9d7b-d9e7baba001f", "usuario@example.com", true, false, null, "Usuario Regular", "USUARIO@EXAMPLE.COM", "USUARIO@EXAMPLE.COM", "AQAAAAIAAYagAAAAEF8t7EMVnlOwQkkhy/526+mNmfUPomTiVYpFAiZJc2DkJHkM0uFklKVeQ5FcYI301Q==", null, false, "Usuario", "222143e3-6605-4411-83e5-a974eb885cc8", "1122334455", false, "usuario@example.com" }
                 });
 
             migrationBuilder.InsertData(
@@ -226,6 +273,11 @@ namespace Caso_2.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Eventos_CategoriaId",
+                table: "Eventos",
+                column: "CategoriaId");
         }
 
         /// <inheritdoc />
@@ -247,10 +299,16 @@ namespace Caso_2.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Eventos");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Categorias");
         }
     }
 }

@@ -2,15 +2,33 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Caso_2.Models;
+using System.Reflection.Emit;
 
 public class CasoContext : IdentityDbContext<Usuario>
 {
     public CasoContext(DbContextOptions<CasoContext> options) : base(options) { }
 
+    public DbSet<Categoria> Categorias { get; set; }
+    public DbSet<Evento> Eventos { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
 
+        // Relación uno a muchos entre Categoria y Evento
+        builder.Entity<Categoria>()
+            .HasMany(c => c.Eventos)
+            .WithOne(e => e.Categoria)
+            .HasForeignKey(e => e.CategoriaId)
+            .OnDelete(DeleteBehavior.Cascade); // Elimina los eventos asociados si se elimina una categoría
+
+        // Configuración de valores predeterminados
+        builder.Entity<Categoria>()
+            .Property(c => c.FechaRegistro)
+            .HasDefaultValueSql("GETDATE()");
+
+        builder.Entity<Evento>()
+            .Property(e => e.FechaRegistro)
+            .HasDefaultValueSql("GETDATE()");
         // Crear roles iniciales
         var adminRole = new IdentityRole { Id = "1", Name = "Administrador", NormalizedName = "ADMINISTRADOR" };
         var organizadorRole = new IdentityRole { Id = "2", Name = "Organizador", NormalizedName = "ORGANIZADOR" };
