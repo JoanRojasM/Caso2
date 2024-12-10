@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Categoria>
+
+@{
+    ViewData["Title"] = "Listado de Categorías";
+}
+
+<h1 class="mb-4">Categorías</h1>
+<a class="btn btn-primary mb-3" href="/Categoria/Create">Crear nueva categoría</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var categoria in Model)
+        {
+            <tr>
+                <td>@categoria.Nombre</td>
+                <td>
+                    @if (categoria.Estado)
+                    {
+                        <span class="badge bg-success">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Inactivo</span>
+                    }
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-warning" href="/Categoria/Edit/@categoria.Id">Editar</a>
+                    <a class="btn btn-sm btn-danger" href="/Categoria/Delete/@categoria.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

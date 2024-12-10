@@ -20,9 +20,7 @@ namespace Caso_2.Models
         [Required]
         public DateTime FechaRegistro { get; set; } = DateTime.Now;
 
-        [Required]
-        [StringLength(50, ErrorMessage = "El usuario de registro no puede superar los 50 caracteres.")]
-        public string UsuarioRegistro { get; set; }
+        public string? UsuarioRegistro { get; set; }
         public virtual IEnumerable<Evento>? Eventos { get; set; } = new List<Evento>();
 
     }

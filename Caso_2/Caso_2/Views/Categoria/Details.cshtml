@@ -1,0 +1,33 @@
+﻿@model Categoria
+
+@{
+    ViewData["Title"] = "Detalles de Categoría";
+}
+
+<h1 class="mb-4">Detalles de Categoría</h1>
+
+<div class="card">
+    <div class="card-header">
+        <h3>@Model.Nombre</h3>
+    </div>
+    <div class="card-body">
+        <p><strong>Descripción:</strong> @Model.Descripcion</p>
+        <p>
+            <strong>Estado:</strong>
+            @if (Model.Estado)
+            {
+                <span class="badge bg-success">Activo</span>
+            }
+            else
+            {
+                <span class="badge bg-danger">Inactivo</span>
+            }
+        </p>
+        <p><strong>Fecha de Registro:</strong> @Model.FechaRegistro.ToString("dd/MM/yyyy HH:mm")</p>
+        <p><strong>Usuario de Registro:</strong> @Model.UsuarioRegistro</p>
+    </div>
+    <div class="card-footer">
+        <a class="btn btn-primary" href="/Categoria/Edit/@Model.Id">Editar</a>
+        <a class="btn btn-secondary" href="/Categoria">Volver al Listado</a>
+    </div>
+</div>

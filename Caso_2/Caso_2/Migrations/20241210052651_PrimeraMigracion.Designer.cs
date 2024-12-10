@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Caso_2.Migrations
 {
     [DbContext(typeof(CasoContext))]
-    [Migration("20241210050048_Initial")]
-    partial class Initial
+    [Migration("20241210052651_PrimeraMigracion")]
+    partial class PrimeraMigracion
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -192,17 +192,17 @@ namespace Caso_2.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "0bd1bf5a-4399-484d-8428-d2123fb15062",
+                            ConcurrencyStamp = "dc67049e-8567-471f-9f9c-11109d00ef29",
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NombreCompleto = "Administrador General",
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAECsvjrfX23gMmpBSdGk2p4LTWbo3xgrlNh+jww1yhEAeQcGtnvYEcXmv1kIOxUHv0w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELXMz4F1DaHhSuyvL00Ak5rM0X+32O5vR/RpxFee8ACl5CEKjF9OuIk8XKkQ1rsa2w==",
                             PhoneNumberConfirmed = false,
                             Rol = "Administrador",
-                            SecurityStamp = "96444f05-b1ee-425d-bdf4-593fbecbac35",
+                            SecurityStamp = "0e765114-ebaf-4c5f-b513-059980b85430",
                             Telefono = "123456789",
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com"
@@ -211,17 +211,17 @@ namespace Caso_2.Migrations
                         {
                             Id = "2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "602b3d62-609d-4af0-9302-62894c349557",
+                            ConcurrencyStamp = "8d3f9e46-d6e0-4afd-aace-3c7bc7074670",
                             Email = "organizador@example.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NombreCompleto = "Organizador Evento",
                             NormalizedEmail = "ORGANIZADOR@EXAMPLE.COM",
                             NormalizedUserName = "ORGANIZADOR@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEAvfy3lCRBZLxfCK1xyKuvBA/oxF11NcNNN5JE6q/PJhemrQzgJWBUyZkb7YLEvvlw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEEeWNHYCyIg/b3TKK5VknwM9VuqtX9yH36YzCbkLOMJnvUFp4TbOywyS+h66SKYJUA==",
                             PhoneNumberConfirmed = false,
                             Rol = "Organizador",
-                            SecurityStamp = "37428f36-e546-4db4-8743-d90a4bc6eeb1",
+                            SecurityStamp = "fbcf0e67-33cf-4b91-baa1-b1c63b8a8582",
                             Telefono = "987654321",
                             TwoFactorEnabled = false,
                             UserName = "organizador@example.com"
@@ -230,17 +230,17 @@ namespace Caso_2.Migrations
                         {
                             Id = "3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1656a7fa-f655-4972-9d7b-d9e7baba001f",
+                            ConcurrencyStamp = "2abf45b4-873c-4b3e-961d-672c7cb7ae87",
                             Email = "usuario@example.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NombreCompleto = "Usuario Regular",
                             NormalizedEmail = "USUARIO@EXAMPLE.COM",
                             NormalizedUserName = "USUARIO@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEF8t7EMVnlOwQkkhy/526+mNmfUPomTiVYpFAiZJc2DkJHkM0uFklKVeQ5FcYI301Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDmLvx3UvoindJUsbQZYugGNqt2xmboK9reL7xGF+rMBTRvpGGXWvKx9iP7ZNg4u8A==",
                             PhoneNumberConfirmed = false,
                             Rol = "Usuario",
-                            SecurityStamp = "222143e3-6605-4411-83e5-a974eb885cc8",
+                            SecurityStamp = "d9ad5c43-62f7-484e-9074-abcb8ce1daec",
                             Telefono = "1122334455",
                             TwoFactorEnabled = false,
                             UserName = "usuario@example.com"

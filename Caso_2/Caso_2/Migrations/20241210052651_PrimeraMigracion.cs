@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Caso_2.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class PrimeraMigracion : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -220,9 +220,9 @@ namespace Caso_2.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NombreCompleto", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Rol", "SecurityStamp", "Telefono", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "1", 0, "0bd1bf5a-4399-484d-8428-d2123fb15062", "admin@example.com", true, false, null, "Administrador General", "ADMIN@EXAMPLE.COM", "ADMIN@EXAMPLE.COM", "AQAAAAIAAYagAAAAECsvjrfX23gMmpBSdGk2p4LTWbo3xgrlNh+jww1yhEAeQcGtnvYEcXmv1kIOxUHv0w==", null, false, "Administrador", "96444f05-b1ee-425d-bdf4-593fbecbac35", "123456789", false, "admin@example.com" },
-                    { "2", 0, "602b3d62-609d-4af0-9302-62894c349557", "organizador@example.com", true, false, null, "Organizador Evento", "ORGANIZADOR@EXAMPLE.COM", "ORGANIZADOR@EXAMPLE.COM", "AQAAAAIAAYagAAAAEAvfy3lCRBZLxfCK1xyKuvBA/oxF11NcNNN5JE6q/PJhemrQzgJWBUyZkb7YLEvvlw==", null, false, "Organizador", "37428f36-e546-4db4-8743-d90a4bc6eeb1", "987654321", false, "organizador@example.com" },
-                    { "3", 0, "1656a7fa-f655-4972-9d7b-d9e7baba001f", "usuario@example.com", true, false, null, "Usuario Regular", "USUARIO@EXAMPLE.COM", "USUARIO@EXAMPLE.COM", "AQAAAAIAAYagAAAAEF8t7EMVnlOwQkkhy/526+mNmfUPomTiVYpFAiZJc2DkJHkM0uFklKVeQ5FcYI301Q==", null, false, "Usuario", "222143e3-6605-4411-83e5-a974eb885cc8", "1122334455", false, "usuario@example.com" }
+                    { "1", 0, "dc67049e-8567-471f-9f9c-11109d00ef29", "admin@example.com", true, false, null, "Administrador General", "ADMIN@EXAMPLE.COM", "ADMIN@EXAMPLE.COM", "AQAAAAIAAYagAAAAELXMz4F1DaHhSuyvL00Ak5rM0X+32O5vR/RpxFee8ACl5CEKjF9OuIk8XKkQ1rsa2w==", null, false, "Administrador", "0e765114-ebaf-4c5f-b513-059980b85430", "123456789", false, "admin@example.com" },
+                    { "2", 0, "8d3f9e46-d6e0-4afd-aace-3c7bc7074670", "organizador@example.com", true, false, null, "Organizador Evento", "ORGANIZADOR@EXAMPLE.COM", "ORGANIZADOR@EXAMPLE.COM", "AQAAAAIAAYagAAAAEEeWNHYCyIg/b3TKK5VknwM9VuqtX9yH36YzCbkLOMJnvUFp4TbOywyS+h66SKYJUA==", null, false, "Organizador", "fbcf0e67-33cf-4b91-baa1-b1c63b8a8582", "987654321", false, "organizador@example.com" },
+                    { "3", 0, "2abf45b4-873c-4b3e-961d-672c7cb7ae87", "usuario@example.com", true, false, null, "Usuario Regular", "USUARIO@EXAMPLE.COM", "USUARIO@EXAMPLE.COM", "AQAAAAIAAYagAAAAEDmLvx3UvoindJUsbQZYugGNqt2xmboK9reL7xGF+rMBTRvpGGXWvKx9iP7ZNg4u8A==", null, false, "Usuario", "d9ad5c43-62f7-484e-9074-abcb8ce1daec", "1122334455", false, "usuario@example.com" }
                 });
 
             migrationBuilder.InsertData(
