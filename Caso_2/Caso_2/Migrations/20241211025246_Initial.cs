@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Caso_2.Migrations
 {
     /// <inheritdoc />
-    public partial class PrimeraMigracion : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -65,7 +65,7 @@ namespace Caso_2.Migrations
                     Descripcion = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     Estado = table.Column<bool>(type: "bit", nullable: false),
                     FechaRegistro = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()"),
-                    UsuarioRegistro = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
+                    UsuarioRegistro = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -192,7 +192,9 @@ namespace Caso_2.Migrations
                     Duracion = table.Column<int>(type: "int", nullable: false),
                     Ubicacion = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     CupoMaximo = table.Column<int>(type: "int", nullable: false),
-                    FechaRegistro = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()")
+                    FechaRegistro = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()"),
+                    UsuarioRegistro = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Estado = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -220,9 +222,9 @@ namespace Caso_2.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NombreCompleto", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Rol", "SecurityStamp", "Telefono", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "1", 0, "dc67049e-8567-471f-9f9c-11109d00ef29", "admin@example.com", true, false, null, "Administrador General", "ADMIN@EXAMPLE.COM", "ADMIN@EXAMPLE.COM", "AQAAAAIAAYagAAAAELXMz4F1DaHhSuyvL00Ak5rM0X+32O5vR/RpxFee8ACl5CEKjF9OuIk8XKkQ1rsa2w==", null, false, "Administrador", "0e765114-ebaf-4c5f-b513-059980b85430", "123456789", false, "admin@example.com" },
-                    { "2", 0, "8d3f9e46-d6e0-4afd-aace-3c7bc7074670", "organizador@example.com", true, false, null, "Organizador Evento", "ORGANIZADOR@EXAMPLE.COM", "ORGANIZADOR@EXAMPLE.COM", "AQAAAAIAAYagAAAAEEeWNHYCyIg/b3TKK5VknwM9VuqtX9yH36YzCbkLOMJnvUFp4TbOywyS+h66SKYJUA==", null, false, "Organizador", "fbcf0e67-33cf-4b91-baa1-b1c63b8a8582", "987654321", false, "organizador@example.com" },
-                    { "3", 0, "2abf45b4-873c-4b3e-961d-672c7cb7ae87", "usuario@example.com", true, false, null, "Usuario Regular", "USUARIO@EXAMPLE.COM", "USUARIO@EXAMPLE.COM", "AQAAAAIAAYagAAAAEDmLvx3UvoindJUsbQZYugGNqt2xmboK9reL7xGF+rMBTRvpGGXWvKx9iP7ZNg4u8A==", null, false, "Usuario", "d9ad5c43-62f7-484e-9074-abcb8ce1daec", "1122334455", false, "usuario@example.com" }
+                    { "1", 0, "f01e996b-a6f7-4088-b282-98def4122a91", "admin@example.com", true, false, null, "Administrador General", "ADMIN@EXAMPLE.COM", "ADMIN@EXAMPLE.COM", "AQAAAAIAAYagAAAAEB3Tsl39BEQEVI+UsXtZtTFazBdVQ/DshBIpfKiJv2Tz2Dp1kJvJaxWSrfjdvMvT3w==", null, false, "Administrador", "48fa58e5-df32-46ac-b249-9723ce987387", "123456789", false, "admin@example.com" },
+                    { "2", 0, "50a8a4d5-3359-44fa-b83f-e4295bb5f992", "organizador@example.com", true, false, null, "Organizador Evento", "ORGANIZADOR@EXAMPLE.COM", "ORGANIZADOR@EXAMPLE.COM", "AQAAAAIAAYagAAAAEF6po+O7QMh5HON8XCDdimNMm/O927tYBPG2mJPDx52BQ4bB6bbGwxiNDg1sxUdvSg==", null, false, "Organizador", "651d30ae-17ab-4765-9294-169cc19d084c", "987654321", false, "organizador@example.com" },
+                    { "3", 0, "160e2c68-0b47-44ec-983c-435c53311961", "usuario@example.com", true, false, null, "Usuario Regular", "USUARIO@EXAMPLE.COM", "USUARIO@EXAMPLE.COM", "AQAAAAIAAYagAAAAEF6uoxqjIdYV4fY5mbqa7nBX4bwv5ApCcYCmSLjaesHQJvhAdBGtvWCABxUTxFPv7Q==", null, false, "Usuario", "c74e88a5-08a4-4472-a848-1d733d2a7583", "1122334455", false, "usuario@example.com" }
                 });
 
             migrationBuilder.InsertData(

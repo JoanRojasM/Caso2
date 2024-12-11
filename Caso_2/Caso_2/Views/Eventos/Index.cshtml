@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Caso_2.Models.Evento>
+@using Microsoft.AspNetCore.Mvc.Rendering
 
 @{
     ViewData["Title"] = "Eventos";
@@ -6,9 +7,21 @@
 
 <h2>Eventos</h2>
 
+<form method="get" asp-action="Index" style="margin-bottom: 20px;">
+   
+
+    <div style="margin-bottom: 10px;">
+        <label for="activo" style="font-weight: bold;">Filtrar por Estado:</label>
+        <select name="activo" asp-items="ViewBag.Activos" onchange="this.form.submit()" style="width: 100%; padding: 8px;" class="bg-dark text-white">
+            
+        </select>
+
+    </div>
+</form>
+
 <a asp-action="Create" class="btn btn-primary mb-3">Crear Nuevo Evento</a>
 
-<table class="table table-striped">
+<table class="table table-striped table-dark">
     <thead>
         <tr>
             <th>Título</th>
@@ -29,7 +42,7 @@
                 <td>
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Detalles</a>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Editar</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Eliminar</a>
+                    <a asp-action="Inactivar" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Inactivar</a>
                 </td>
             </tr>
         }

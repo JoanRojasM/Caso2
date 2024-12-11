@@ -1,8 +1,62 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<main class="container">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <section class="row text-center g-4">
+        
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow" style="background-color: #35395e; cursor: pointer;" onclick="location.href='/Usuarios/Index';">
+                <div class="card-body">
+                    <div class="icon mb-3">
+                        <i class="bi bi-people fs-1 text-white"></i>
+                    </div>
+                    <h5 class="card-title text-white">Gestión de Usuarios</h5>
+                    <p class="card-text text-white">Administra los usuarios que están registrados en el sistema y sus roles.</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow" style="background-color: #35395e; cursor: pointer;" onclick="location.href='/Eventos/Index';">
+                <div class="card-body">
+                    <div class="icon mb-3">
+                        <i class="bi bi-calendar-event fs-1 text-white"></i>
+                    </div>
+                    <h5 class="card-title text-white">Eventos</h5>
+                    <p class="card-text text-white">Lleva el registro de tus eventos con nuestro registro hecho a la medida para que no se te vaya ningún detalle.</p>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow" style="background-color: #35395e; cursor: pointer;" onclick="location.href='/Categoria/Index';">
+                <div class="card-body">
+                    <div class="icon mb-3">
+                        <i class="bi bi-tags fs-1 text-white"></i>
+                    </div>
+                    <h5 class="card-title text-white">Gestión de Categorías</h5>
+                    <p class="card-text text-white">Divide tus eventos por categorías para así poder llevar un mejor control de estos.</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow" style="background-color: #35395e; cursor: pointer;" onclick="location.href='/Dashboard/Index';">
+                <div class="card-body">
+                    <div class="icon mb-3">
+                        <i class="bi bi-bar-chart-line fs-1 text-white"></i>
+                    </div>
+                    <h5 class="card-title text-white">Dashboard Administrativo</h5>
+                    <p class="card-text text-white">Visualiza la información de tu sistema de una manera más llamativa y visual en nuestro dashboard administrativo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center py-5">
+        <h2 class="mb-4 text-light">¿Busca un asesor para su evento?</h2>
+        <p class="lead text-light">Con nuestro sistema, llevas el control de tus eventos de manera eficiente y organizada.</p>
+    </section>
+
+</main>

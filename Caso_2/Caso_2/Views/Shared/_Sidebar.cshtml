@@ -1,0 +1,47 @@
+﻿<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sidebarLabel">Menú</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="nav flex-column">
+            @if (await GetUserRole() == "Administrador")
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Menu Principal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-area="" asp-controller="Eventos" asp-action="Index">Eventos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-area="" asp-controller="Categoria" asp-action="Index">Categorias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+@using Microsoft.AspNetCore.Identity
+    @inject UserManager<Usuario> UserManager
+
+@functions {
+    public async Task<string> GetUserRole()
+    {
+        // Obtener el usuario autenticado
+        var user = await UserManager.GetUserAsync(User);
+
+        if (user == null)
+            return "Sin Rol";
+
+        // Recuperar los roles asociados al usuario
+        var roles = await UserManager.GetRolesAsync(user);
+
+        // Devolver el primer rol encontrado
+        return roles.FirstOrDefault() ?? "Sin Rol";
+    }
+    }

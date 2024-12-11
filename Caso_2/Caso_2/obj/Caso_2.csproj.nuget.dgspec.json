@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dylan\\Documents\\GitHub\\Caso2\\Caso_2\\Caso_2\\Caso_2.csproj": {}
+    "E:\\Universidad\\3er Año\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Caso_2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dylan\\Documents\\GitHub\\Caso2\\Caso_2\\Caso_2\\Caso_2.csproj": {
+    "E:\\Universidad\\3er Año\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Caso_2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dylan\\Documents\\GitHub\\Caso2\\Caso_2\\Caso_2\\Caso_2.csproj",
+        "projectUniqueName": "E:\\Universidad\\3er Año\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Caso_2.csproj",
         "projectName": "Caso_2",
-        "projectPath": "C:\\Users\\dylan\\Documents\\GitHub\\Caso2\\Caso_2\\Caso_2\\Caso_2.csproj",
-        "packagesPath": "C:\\Users\\dylan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dylan\\Documents\\GitHub\\Caso2\\Caso_2\\Caso_2\\obj\\",
+        "projectPath": "E:\\Universidad\\3er Año\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Caso_2.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "E:\\Universidad\\3er Año\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dylan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

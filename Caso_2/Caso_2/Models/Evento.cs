@@ -3,9 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Caso_2.Models
 {
-    public class Evento
+    public class Evento 
     {
-
         [Key]
         public int Id { get; set; }
 
@@ -44,6 +43,9 @@ namespace Caso_2.Models
 
         [Required]
         public DateTime FechaRegistro { get; set; } = DateTime.Now;
-
+        [Required]      
+        public string UsuarioRegistro { get; set; }
+        [Required(ErrorMessage = "El estado es obligatorio.")]
+        public bool Estado { get; set; }
     }
 }

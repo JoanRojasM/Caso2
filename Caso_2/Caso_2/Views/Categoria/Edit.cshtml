@@ -10,17 +10,17 @@
     <input type="hidden" asp-for="Id" />
     <div class="mb-3">
         <label for="Nombre" class="form-label">Nombre</label>
-        <input asp-for="Nombre" class="form-control" />
+        <input asp-for="Nombre" class="form-control bg-dark text-white" />
         <span asp-validation-for="Nombre" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label for="Descripcion" class="form-label">Descripción</label>
-        <textarea asp-for="Descripcion" class="form-control"></textarea>
+        <textarea asp-for="Descripcion" class="form-control bg-dark text-white"></textarea>
         <span asp-validation-for="Descripcion" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label for="Estado" class="form-label">Estado</label>
-        <select asp-for="Estado" class="form-select">
+        <select asp-for="Estado" class="form-select bg-dark text-white">
             <option value="true" selected="@Model.Estado">Activo</option>
             <option value="false" selected="!@Model.Estado">Inactivo</option>
         </select>

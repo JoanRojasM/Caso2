@@ -6,11 +6,11 @@
 
 <h1 class="mb-4">Detalles de Categoría</h1>
 
-<div class="card">
-    <div class="card-header">
+<div class="card text-white">
+    <div class="card-header" style="background-color:#09090b">
         <h3>@Model.Nombre</h3>
     </div>
-    <div class="card-body">
+    <div class="card-body" style="background-color:#171c22">
         <p><strong>Descripción:</strong> @Model.Descripcion</p>
         <p>
             <strong>Estado:</strong>
@@ -26,7 +26,7 @@
         <p><strong>Fecha de Registro:</strong> @Model.FechaRegistro.ToString("dd/MM/yyyy HH:mm")</p>
         <p><strong>Usuario de Registro:</strong> @Model.UsuarioRegistro</p>
     </div>
-    <div class="card-footer">
+    <div class="card-footer" style="background-color:#121922">
         <a class="btn btn-primary" href="/Categoria/Edit/@Model.Id">Editar</a>
         <a class="btn btn-secondary" href="/Categoria">Volver al Listado</a>
     </div>
