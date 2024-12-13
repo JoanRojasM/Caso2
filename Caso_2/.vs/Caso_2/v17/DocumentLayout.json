@@ -1,50 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\",
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|e:\\universidad\\3er a\u00F1o\\9no cuatrimestre\\progra avanzada web\\caso2\\caso_2\\caso_2\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\controllers\\inscripcioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\controllers\\inscripcioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|e:\\universidad\\3er a\u00F1o\\9no cuatrimestre\\progra avanzada web\\caso2\\caso_2\\caso_2\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|e:\\universidad\\3er a\u00F1o\\9no cuatrimestre\\progra avanzada web\\caso2\\caso_2\\caso_2\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|e:\\universidad\\3er a\u00F1o\\9no cuatrimestre\\progra avanzada web\\caso2\\caso_2\\caso_2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|e:\\universidad\\3er a\u00F1o\\9no cuatrimestre\\progra avanzada web\\caso2\\caso_2\\caso_2\\views\\eventos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\eventos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|e:\\universidad\\3er a\u00F1o\\9no cuatrimestre\\progra avanzada web\\caso2\\caso_2\\caso_2\\controllers\\eventoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\controllers\\eventoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|e:\\universidad\\3er a\u00F1o\\9no cuatrimestre\\progra avanzada web\\caso2\\caso_2\\caso_2\\views\\eventos\\inactivar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\eventos\\inactivar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|e:\\universidad\\3er a\u00F1o\\9no cuatrimestre\\progra avanzada web\\caso2\\caso_2\\caso_2\\models\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\models\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\models\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|e:\\universidad\\3er a\u00F1o\\9no cuatrimestre\\progra avanzada web\\caso2\\caso_2\\caso_2\\views\\eventos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\eventos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\controllers\\eventoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\controllers\\eventoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|e:\\universidad\\3er a\u00F1o\\9no cuatrimestre\\progra avanzada web\\caso2\\caso_2\\caso_2\\views\\eventos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\eventos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\views\\inscripcion\\inscribir.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\inscripcion\\inscribir.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|e:\\universidad\\3er a\u00F1o\\9no cuatrimestre\\progra avanzada web\\caso2\\caso_2\\caso_2\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\models\\eventoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\models\\eventoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\models\\casocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\models\\casocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\views\\inscripcion\\inscritos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\inscripcion\\inscritos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\views\\eventos\\eventosconinscritos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\eventos\\eventosconinscritos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|c:\\users\\usuario\\onedrive\\documentos\\github\\caso2\\caso_2\\caso_2\\migrations\\20241213003803_initial create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76671A25-7AA9-4594-83F6-3EA2B3C45820}|Caso_2\\Caso_2.csproj|solutionrelative:caso_2\\migrations\\20241213003803_initial create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,150 +62,288 @@
       "DocumentGroups": [
         {
           "DockedWidth": 142,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 19,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Sidebar.cshtml",
-              "DocumentMoniker": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Shared\\_Sidebar.cshtml",
-              "RelativeDocumentMoniker": "Caso_2\\Views\\Shared\\_Sidebar.cshtml",
-              "ToolTip": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Shared\\_Sidebar.cshtml",
-              "RelativeToolTip": "Caso_2\\Views\\Shared\\_Sidebar.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAB2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T05:59:17.086Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d562c6a0-d2fe-4c19-a8b3-e5cbc09bf375}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{5c82a791-7c9f-441e-952b-8848655dd85e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{5e929736-0e81-4d52-a78e-546a1649faca}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:296:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a34b1c5d-6d37-4a0c-a8b0-99f8e8158b48}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "Caso_2\\Controllers\\DashboardController.cs",
-              "ToolTip": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "Caso_2\\Controllers\\DashboardController.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAowB8AAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "EventoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Models\\EventoViewModel.cs",
+              "RelativeDocumentMoniker": "Caso_2\\Models\\EventoViewModel.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Models\\EventoViewModel.cs",
+              "RelativeToolTip": "Caso_2\\Models\\EventoViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T05:53:41.666Z",
+              "WhenOpened": "2024-12-13T01:41:11.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InscripcionController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Controllers\\InscripcionController.cs",
+              "RelativeDocumentMoniker": "Caso_2\\Controllers\\InscripcionController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Controllers\\InscripcionController.cs",
+              "RelativeToolTip": "Caso_2\\Controllers\\InscripcionController.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAiwGYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T01:40:32.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Caso_2\\Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Caso_2\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAIAAAA",
+              "Title": "Inscribir.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Views\\Inscripcion\\Inscribir.cshtml",
+              "RelativeDocumentMoniker": "Caso_2\\Views\\Inscripcion\\Inscribir.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Views\\Inscripcion\\Inscribir.cshtml",
+              "RelativeToolTip": "Caso_2\\Views\\Inscripcion\\Inscribir.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwDIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T05:43:24.456Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Inactivar.cshtml",
-              "DocumentMoniker": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Eventos\\Inactivar.cshtml",
-              "RelativeDocumentMoniker": "Caso_2\\Views\\Eventos\\Inactivar.cshtml",
-              "ToolTip": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Eventos\\Inactivar.cshtml",
-              "RelativeToolTip": "Caso_2\\Views\\Eventos\\Inactivar.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T05:19:39.881Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Caso_2\\Views\\Account\\Login.cshtml",
-              "ToolTip": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Caso_2\\Views\\Account\\Login.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T03:59:42.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Eventos\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Caso_2\\Views\\Eventos\\Edit.cshtml",
-              "ToolTip": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Eventos\\Edit.cshtml",
-              "RelativeToolTip": "Caso_2\\Views\\Eventos\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T02:49:57.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T01:37:59.269Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "EventosController.cs",
-              "DocumentMoniker": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Controllers\\EventosController.cs",
-              "RelativeDocumentMoniker": "Caso_2\\Controllers\\EventosController.cs",
-              "ToolTip": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Controllers\\EventosController.cs",
-              "RelativeToolTip": "Caso_2\\Controllers\\EventosController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAowBkAAAAIAAAA",
+              "Title": "CasoContext.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Models\\CasoContext.cs",
+              "RelativeDocumentMoniker": "Caso_2\\Models\\CasoContext.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Models\\CasoContext.cs",
+              "RelativeToolTip": "Caso_2\\Models\\CasoContext.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowFIAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T02:47:06.129Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T01:37:26.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Eventos\\Index.cshtml",
-              "RelativeDocumentMoniker": "Caso_2\\Views\\Eventos\\Index.cshtml",
-              "ToolTip": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Eventos\\Index.cshtml",
-              "RelativeToolTip": "Caso_2\\Views\\Eventos\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAaAAAA",
+              "DocumentIndex": 8,
+              "Title": "EventosConInscritos.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Views\\Eventos\\EventosConInscritos.cshtml",
+              "RelativeDocumentMoniker": "Caso_2\\Views\\Eventos\\EventosConInscritos.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Views\\Eventos\\EventosConInscritos.cshtml",
+              "RelativeToolTip": "Caso_2\\Views\\Eventos\\EventosConInscritos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T04:29:38.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Eventos\\Create.cshtml",
-              "RelativeDocumentMoniker": "Caso_2\\Views\\Eventos\\Create.cshtml",
-              "ToolTip": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Eventos\\Create.cshtml",
-              "RelativeToolTip": "Caso_2\\Views\\Eventos\\Create.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T04:15:03.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Dashboard\\Index.cshtml",
-              "RelativeDocumentMoniker": "Caso_2\\Views\\Dashboard\\Index.cshtml",
-              "ToolTip": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Views\\Dashboard\\Index.cshtml",
-              "RelativeToolTip": "Caso_2\\Views\\Dashboard\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T02:28:25.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T01:32:54.032Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Evento.cs",
-              "DocumentMoniker": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Models\\Evento.cs",
-              "RelativeDocumentMoniker": "Caso_2\\Models\\Evento.cs",
-              "ToolTip": "E:\\Universidad\\3er A\u00F1o\\9no Cuatrimestre\\Progra Avanzada Web\\Caso2\\Caso_2\\Caso_2\\Models\\Evento.cs",
-              "RelativeToolTip": "Caso_2\\Models\\Evento.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAowDMAAAAAAAAA",
+              "Title": "Inscritos.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Views\\Inscripcion\\Inscritos.cshtml",
+              "RelativeDocumentMoniker": "Caso_2\\Views\\Inscripcion\\Inscritos.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Views\\Inscripcion\\Inscritos.cshtml",
+              "RelativeToolTip": "Caso_2\\Views\\Inscripcion\\Inscritos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-13T01:06:12.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Caso_2\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Caso_2\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACsAAAAAAAAAAAAiwEAAAACcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-13T01:08:32.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EventosController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Controllers\\EventosController.cs",
+              "RelativeDocumentMoniker": "Caso_2\\Controllers\\EventosController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Controllers\\EventosController.cs",
+              "RelativeToolTip": "Caso_2\\Controllers\\EventosController.cs",
+              "ViewState": "AgIAANMAAAAAAAAAAAAQwPMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T02:43:46.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T00:56:42.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Sidebar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeDocumentMoniker": "Caso_2\\Views\\Shared\\_Sidebar.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeToolTip": "Caso_2\\Views\\Shared\\_Sidebar.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwB8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-13T00:47:28.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Evento.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Models\\Evento.cs",
+              "RelativeDocumentMoniker": "Caso_2\\Models\\Evento.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Models\\Evento.cs",
+              "RelativeToolTip": "Caso_2\\Models\\Evento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T00:56:10.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20241213003803_Initial Create.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Migrations\\20241213003803_Initial Create.cs",
+              "RelativeDocumentMoniker": "Caso_2\\Migrations\\20241213003803_Initial Create.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Migrations\\20241213003803_Initial Create.cs",
+              "RelativeToolTip": "Caso_2\\Migrations\\20241213003803_Initial Create.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T00:38:03.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\appsettings.json",
+              "RelativeDocumentMoniker": "Caso_2\\appsettings.json",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\appsettings.json",
+              "RelativeToolTip": "Caso_2\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-13T00:37:12.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Program.cs",
+              "RelativeDocumentMoniker": "Caso_2\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Documentos\\GitHub\\Caso2\\Caso_2\\Caso_2\\Program.cs",
+              "RelativeToolTip": "Caso_2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T00:37:10.015Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d98f7c4d-b652-422c-bcdf-3d0e2b2da2c1}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:18:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:19:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:21:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cdbdee54-b399-484b-b763-db2c3393d646}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 150,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

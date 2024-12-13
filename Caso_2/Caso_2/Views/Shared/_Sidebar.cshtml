@@ -22,7 +22,22 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" asp-area="" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
                 </li>
+                <li class="nav-item mt-3">
+                    <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-danger w-100">Cerrar Sesión</button>
+                    </form>
+                </li>
             }
+
+            @if (await GetUserRole() == "Usuario")
+            {
+                <li class="nav-item mt-3">
+                    <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-danger w-100">Cerrar Sesión</button>
+                    </form>
+                </li>
+            }
+
         </ul>
     </div>
 </div>

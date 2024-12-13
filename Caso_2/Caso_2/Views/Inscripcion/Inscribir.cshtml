@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Caso_2.Models.EventoViewModel>
+
+<h1 class="text-white">Eventos Disponibles</h1>
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Ubicación</th>
+            <th>Cupo Disponible</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Evento.Titulo</td>
+                <td>@item.Evento.Fecha.ToShortDateString()</td>
+                <td>@item.Evento.Hora</td>
+                <td>@item.Evento.Ubicacion</td>
+                <td>@item.Evento.CupoMaximo</td>
+                <td>
+                    @if (item.YaInscrito)
+                    {
+                        <!-- Botón Quitar Inscripción -->
+                        <form asp-action="QuitarInscripcion" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@item.Evento.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                <i class="bi bi-x-circle"></i> Quitar Inscripción
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <!-- Botón Inscribirse -->
+                        <form asp-action="InscribirEvento" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@item.Evento.Id" />
+                            <button type="submit" class="btn btn-primary btn-sm">Inscribirse</button>
+                        </form>
+                    }
+
+                    <!-- Botón Detalles -->
+                    <a asp-action="Details" asp-controller="Eventos" asp-route-id="@item.Evento.Id" class="btn btn-info btn-sm">Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

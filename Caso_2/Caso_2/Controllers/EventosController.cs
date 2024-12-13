@@ -240,4 +240,14 @@ public async Task<IActionResult> InactivarConfirmed(int id)
     {
         return _context.Eventos.Any(e => e.Id == id);
     }
+
+    public async Task<IActionResult> EventosConInscritos()
+    {
+        // Obtener todos los eventos con la información básica
+        var eventos = await _context.Eventos
+            .Include(e => e.Categoria)
+            .ToListAsync();
+
+        return View(eventos);
+    }
 }

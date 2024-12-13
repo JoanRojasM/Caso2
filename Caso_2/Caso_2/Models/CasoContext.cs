@@ -10,6 +10,7 @@ public class CasoContext : IdentityDbContext<Usuario>
 
     public DbSet<Categoria> Categorias { get; set; }
     public DbSet<Evento> Eventos { get; set; }
+    public DbSet<Inscripcion> Inscripciones { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

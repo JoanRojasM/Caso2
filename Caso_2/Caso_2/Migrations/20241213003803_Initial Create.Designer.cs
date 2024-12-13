@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Caso_2.Migrations
 {
     [DbContext(typeof(CasoContext))]
-    partial class CasoContextModelSnapshot : ModelSnapshot
+    [Migration("20241213003803_Initial Create")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -112,33 +115,6 @@ namespace Caso_2.Migrations
                     b.ToTable("Eventos");
                 });
 
-            modelBuilder.Entity("Caso_2.Models.Inscripcion", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("EventoId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("FechaInscripcion")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UsuarioId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EventoId");
-
-                    b.HasIndex("UsuarioId");
-
-                    b.ToTable("Inscripciones");
-                });
-
             modelBuilder.Entity("Caso_2.Models.Usuario", b =>
                 {
                     b.Property<string>("Id")
@@ -221,17 +197,17 @@ namespace Caso_2.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "be3f4c49-c647-4ef1-999c-2b27b00c9b5d",
+                            ConcurrencyStamp = "d0f7fb26-8d5e-4db1-a2e6-f536d1885d61",
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NombreCompleto = "Administrador General",
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEJLYbxD6AnCOH4Ncr3D4WRKMRi+KAsv/Ya8yt9bVk4J0liQ4fz3GkpRNL7A4aVqajA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHCNcO39MQ52MWmR8O1grgI2Ip7K8RyA5C3LfHH1PGx+nYQlUTz9410vcWq2QAcsLA==",
                             PhoneNumberConfirmed = false,
                             Rol = "Administrador",
-                            SecurityStamp = "c94631e3-6def-4194-9263-7e93430a04a4",
+                            SecurityStamp = "e8f10114-a361-40aa-8cda-24593b85be24",
                             Telefono = "123456789",
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com"
@@ -240,17 +216,17 @@ namespace Caso_2.Migrations
                         {
                             Id = "2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "24aebfd6-cbeb-47f2-9a65-948c5cbb6356",
+                            ConcurrencyStamp = "13434545-6fb8-443f-be76-e86ec85371d4",
                             Email = "organizador@example.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NombreCompleto = "Organizador Evento",
                             NormalizedEmail = "ORGANIZADOR@EXAMPLE.COM",
                             NormalizedUserName = "ORGANIZADOR@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEKR//fFS0OwQtMMdw782jaKWqwGUW6USYNEymzvUxQ0de5XXA+2bYEZdE+opevqwFg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEKNVzWQKHLlcmsK086+0lKl4ndVkvN6Ul19ojdXj9RcwSBcotjXF4okWFlvcdrKsCw==",
                             PhoneNumberConfirmed = false,
                             Rol = "Organizador",
-                            SecurityStamp = "66d54575-5d0b-43e6-ad37-6267ee755204",
+                            SecurityStamp = "12e5b3fe-2bdd-40bc-8cb7-77b466cd04a2",
                             Telefono = "987654321",
                             TwoFactorEnabled = false,
                             UserName = "organizador@example.com"
@@ -259,17 +235,17 @@ namespace Caso_2.Migrations
                         {
                             Id = "3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "49af0bd4-6186-46fa-a89b-478a029afb2c",
+                            ConcurrencyStamp = "4c2b5989-b466-4835-8916-2335f731ad6f",
                             Email = "usuario@example.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NombreCompleto = "Usuario Regular",
                             NormalizedEmail = "USUARIO@EXAMPLE.COM",
                             NormalizedUserName = "USUARIO@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAECmOkTdv4/FjvTJmMNasw/C8/oEEci0Uj40qMpmUnHX6URR5wm4L3K//RI2eijvsRA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOoZTV2FD3QPEHomOuHihuq3bASNI2AuYyMgeiqdK8JWxoueLflZJ/4aT88Vf0lu2g==",
                             PhoneNumberConfirmed = false,
                             Rol = "Usuario",
-                            SecurityStamp = "5264d573-9d14-43b1-8ecd-4c761e168982",
+                            SecurityStamp = "ea656561-52d2-4b26-a591-71b6e8ea7839",
                             Telefono = "1122334455",
                             TwoFactorEnabled = false,
                             UserName = "usuario@example.com"
@@ -455,25 +431,6 @@ namespace Caso_2.Migrations
                         .IsRequired();
 
                     b.Navigation("Categoria");
-                });
-
-            modelBuilder.Entity("Caso_2.Models.Inscripcion", b =>
-                {
-                    b.HasOne("Caso_2.Models.Evento", "Evento")
-                        .WithMany()
-                        .HasForeignKey("EventoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Caso_2.Models.Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Evento");
-
-                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

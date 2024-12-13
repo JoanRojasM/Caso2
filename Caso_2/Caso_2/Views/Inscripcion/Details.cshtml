@@ -1,0 +1,18 @@
+﻿@model Caso_2.Models.Evento
+
+<h1 class="text-white">Detalles del Evento</h1>
+
+<div class="card text-white bg-dark mb-3">
+    <div class="card-header">@Model.Titulo</div>
+    <div class="card-body">
+        <p><strong>Descripción:</strong> @Model.Descripcion</p>
+        <p><strong>Categoría:</strong> @Model.Categoria.Nombre</p>
+        <p><strong>Fecha:</strong> @Model.Fecha.ToShortDateString()</p>
+        <p><strong>Hora:</strong> @Model.Hora</p>
+        <p><strong>Duración:</strong> @Model.Duracion horas</p>
+        <p><strong>Ubicación:</strong> @Model.Ubicacion</p>
+        <p><strong>Cupo Disponible:</strong> @Model.CupoMaximo</p>
+    </div>
+</div>
+
+<a asp-action="Inscribir" asp-controller="Inscripcion" class="btn btn-secondary">Volver</a>
