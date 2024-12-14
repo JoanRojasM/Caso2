@@ -53,4 +53,52 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=Login}/{id?}");
 
+// GET /api/events - Lista de eventos
+app.MapGet("/api/events", async (CasoContext db) =>
+{
+    var eventos = await db.Eventos
+        .Where(e => e.Estado) // Solo eventos activos
+        .Select(e => new
+        {
+            e.Id,
+            e.Titulo,
+            e.Descripcion,
+            Categoria = e.Categoria != null ? e.Categoria.Nombre : "Sin Categoría",
+            FechaEvento = e.Fecha.ToString("yyyy-MM-dd"),
+            HoraEvento = e.Hora.ToString(@"hh\:mm"),
+            e.Ubicacion,
+            e.CupoMaximo
+        })
+        .ToListAsync();
+
+    return Results.Ok(eventos);
+});
+
+// GET /api/events/{id}
+app.MapGet("/api/events/{id:int}", async (int id, CasoContext db) =>
+{
+    var evento = await db.Eventos
+        .Where(e => e.Estado && e.Id == id) 
+        .Select(e => new
+        {
+            e.Id,
+            e.Titulo,
+            e.Descripcion,
+            Categoria = e.Categoria != null ? e.Categoria.Nombre : "Sin Categoría",
+            FechaEvento = e.Fecha.ToString("yyyy-MM-dd"),
+            HoraEvento = e.Hora.ToString(@"hh\:mm"),
+            e.Ubicacion,
+            e.CupoMaximo,
+            e.Duracion
+        })
+        .FirstOrDefaultAsync();
+
+    if (evento == null)
+    {
+        return Results.NotFound(new { Message = $"El evento con ID {id} no fue encontrado." });
+    }
+
+    return Results.Ok(evento);
+});
+
 app.Run();

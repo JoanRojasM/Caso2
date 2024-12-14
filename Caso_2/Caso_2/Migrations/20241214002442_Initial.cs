@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Caso_2.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -207,6 +207,33 @@ namespace Caso_2.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Inscripciones",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    EventoId = table.Column<int>(type: "int", nullable: false),
+                    UsuarioId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    FechaInscripcion = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Inscripciones", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Inscripciones_AspNetUsers_UsuarioId",
+                        column: x => x.UsuarioId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Inscripciones_Eventos_EventoId",
+                        column: x => x.EventoId,
+                        principalTable: "Eventos",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
@@ -222,9 +249,9 @@ namespace Caso_2.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NombreCompleto", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Rol", "SecurityStamp", "Telefono", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "1", 0, "d0f7fb26-8d5e-4db1-a2e6-f536d1885d61", "admin@example.com", true, false, null, "Administrador General", "ADMIN@EXAMPLE.COM", "ADMIN@EXAMPLE.COM", "AQAAAAIAAYagAAAAEHCNcO39MQ52MWmR8O1grgI2Ip7K8RyA5C3LfHH1PGx+nYQlUTz9410vcWq2QAcsLA==", null, false, "Administrador", "e8f10114-a361-40aa-8cda-24593b85be24", "123456789", false, "admin@example.com" },
-                    { "2", 0, "13434545-6fb8-443f-be76-e86ec85371d4", "organizador@example.com", true, false, null, "Organizador Evento", "ORGANIZADOR@EXAMPLE.COM", "ORGANIZADOR@EXAMPLE.COM", "AQAAAAIAAYagAAAAEKNVzWQKHLlcmsK086+0lKl4ndVkvN6Ul19ojdXj9RcwSBcotjXF4okWFlvcdrKsCw==", null, false, "Organizador", "12e5b3fe-2bdd-40bc-8cb7-77b466cd04a2", "987654321", false, "organizador@example.com" },
-                    { "3", 0, "4c2b5989-b466-4835-8916-2335f731ad6f", "usuario@example.com", true, false, null, "Usuario Regular", "USUARIO@EXAMPLE.COM", "USUARIO@EXAMPLE.COM", "AQAAAAIAAYagAAAAEOoZTV2FD3QPEHomOuHihuq3bASNI2AuYyMgeiqdK8JWxoueLflZJ/4aT88Vf0lu2g==", null, false, "Usuario", "ea656561-52d2-4b26-a591-71b6e8ea7839", "1122334455", false, "usuario@example.com" }
+                    { "1", 0, "0bf8cf29-1d46-4eef-8c18-206413bbe1d8", "admin@example.com", true, false, null, "Administrador General", "ADMIN@EXAMPLE.COM", "ADMIN@EXAMPLE.COM", "AQAAAAIAAYagAAAAEEmJM67mwUV+HEMteQBragu9T5KYoR5LqOaThHYGt9RuRfv1TMieThhe9zwTSviUSA==", null, false, "Administrador", "566114a5-949c-4969-a1f5-c2582ec5d641", "123456789", false, "admin@example.com" },
+                    { "2", 0, "cf48f1b8-e421-432f-848e-887adf50ecfb", "organizador@example.com", true, false, null, "Organizador Evento", "ORGANIZADOR@EXAMPLE.COM", "ORGANIZADOR@EXAMPLE.COM", "AQAAAAIAAYagAAAAEKtD1Y12VuE9c1UQ8n8/TLRidTSFFvkVYd7YfxdUw82k4TFarmlJY43GdCe0BVXdAQ==", null, false, "Organizador", "d4d65a20-eaf8-4606-988b-21c87616d0bc", "987654321", false, "organizador@example.com" },
+                    { "3", 0, "bdeaa39b-b569-4cb3-aef8-90be7a0fa4c9", "usuario@example.com", true, false, null, "Usuario Regular", "USUARIO@EXAMPLE.COM", "USUARIO@EXAMPLE.COM", "AQAAAAIAAYagAAAAEJBE8TBanEgi/PR2x6NGiP53Sj65k1Ttu0km3GVEQEalDM1z0NPjfoM08IeZr1BUvA==", null, false, "Usuario", "a019e381-6326-4455-8538-9cf39b8ec8d5", "1122334455", false, "usuario@example.com" }
                 });
 
             migrationBuilder.InsertData(
@@ -280,6 +307,16 @@ namespace Caso_2.Migrations
                 name: "IX_Eventos_CategoriaId",
                 table: "Eventos",
                 column: "CategoriaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Inscripciones_EventoId",
+                table: "Inscripciones",
+                column: "EventoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Inscripciones_UsuarioId",
+                table: "Inscripciones",
+                column: "UsuarioId");
         }
 
         /// <inheritdoc />
@@ -301,13 +338,16 @@ namespace Caso_2.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Eventos");
+                name: "Inscripciones");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Eventos");
 
             migrationBuilder.DropTable(
                 name: "Categorias");

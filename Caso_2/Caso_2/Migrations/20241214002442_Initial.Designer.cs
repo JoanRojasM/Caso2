@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Caso_2.Migrations
 {
     [DbContext(typeof(CasoContext))]
-    [Migration("20241211025246_Initial")]
+    [Migration("20241214002442_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -115,6 +115,33 @@ namespace Caso_2.Migrations
                     b.ToTable("Eventos");
                 });
 
+            modelBuilder.Entity("Caso_2.Models.Inscripcion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("EventoId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FechaInscripcion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UsuarioId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventoId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("Inscripciones");
+                });
+
             modelBuilder.Entity("Caso_2.Models.Usuario", b =>
                 {
                     b.Property<string>("Id")
@@ -197,17 +224,17 @@ namespace Caso_2.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f01e996b-a6f7-4088-b282-98def4122a91",
+                            ConcurrencyStamp = "0bf8cf29-1d46-4eef-8c18-206413bbe1d8",
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NombreCompleto = "Administrador General",
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEB3Tsl39BEQEVI+UsXtZtTFazBdVQ/DshBIpfKiJv2Tz2Dp1kJvJaxWSrfjdvMvT3w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEEmJM67mwUV+HEMteQBragu9T5KYoR5LqOaThHYGt9RuRfv1TMieThhe9zwTSviUSA==",
                             PhoneNumberConfirmed = false,
                             Rol = "Administrador",
-                            SecurityStamp = "48fa58e5-df32-46ac-b249-9723ce987387",
+                            SecurityStamp = "566114a5-949c-4969-a1f5-c2582ec5d641",
                             Telefono = "123456789",
                             TwoFactorEnabled = false,
                             UserName = "admin@example.com"
@@ -216,17 +243,17 @@ namespace Caso_2.Migrations
                         {
                             Id = "2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "50a8a4d5-3359-44fa-b83f-e4295bb5f992",
+                            ConcurrencyStamp = "cf48f1b8-e421-432f-848e-887adf50ecfb",
                             Email = "organizador@example.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NombreCompleto = "Organizador Evento",
                             NormalizedEmail = "ORGANIZADOR@EXAMPLE.COM",
                             NormalizedUserName = "ORGANIZADOR@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEF6po+O7QMh5HON8XCDdimNMm/O927tYBPG2mJPDx52BQ4bB6bbGwxiNDg1sxUdvSg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEKtD1Y12VuE9c1UQ8n8/TLRidTSFFvkVYd7YfxdUw82k4TFarmlJY43GdCe0BVXdAQ==",
                             PhoneNumberConfirmed = false,
                             Rol = "Organizador",
-                            SecurityStamp = "651d30ae-17ab-4765-9294-169cc19d084c",
+                            SecurityStamp = "d4d65a20-eaf8-4606-988b-21c87616d0bc",
                             Telefono = "987654321",
                             TwoFactorEnabled = false,
                             UserName = "organizador@example.com"
@@ -235,17 +262,17 @@ namespace Caso_2.Migrations
                         {
                             Id = "3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "160e2c68-0b47-44ec-983c-435c53311961",
+                            ConcurrencyStamp = "bdeaa39b-b569-4cb3-aef8-90be7a0fa4c9",
                             Email = "usuario@example.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NombreCompleto = "Usuario Regular",
                             NormalizedEmail = "USUARIO@EXAMPLE.COM",
                             NormalizedUserName = "USUARIO@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEF6uoxqjIdYV4fY5mbqa7nBX4bwv5ApCcYCmSLjaesHQJvhAdBGtvWCABxUTxFPv7Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJBE8TBanEgi/PR2x6NGiP53Sj65k1Ttu0km3GVEQEalDM1z0NPjfoM08IeZr1BUvA==",
                             PhoneNumberConfirmed = false,
                             Rol = "Usuario",
-                            SecurityStamp = "c74e88a5-08a4-4472-a848-1d733d2a7583",
+                            SecurityStamp = "a019e381-6326-4455-8538-9cf39b8ec8d5",
                             Telefono = "1122334455",
                             TwoFactorEnabled = false,
                             UserName = "usuario@example.com"
@@ -431,6 +458,25 @@ namespace Caso_2.Migrations
                         .IsRequired();
 
                     b.Navigation("Categoria");
+                });
+
+            modelBuilder.Entity("Caso_2.Models.Inscripcion", b =>
+                {
+                    b.HasOne("Caso_2.Models.Evento", "Evento")
+                        .WithMany()
+                        .HasForeignKey("EventoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Caso_2.Models.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Evento");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

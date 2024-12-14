@@ -26,7 +26,7 @@
 
     <div class="mb-3">
         <label asp-for="Fecha" class="form-label"></label>
-        <input asp-for="Fecha" type="date" class="form-control bg-dark text-white" />
+        <input asp-for="Fecha" type="date" class="form-control bg-dark text-white" min="@DateTime.Now.ToString("yyyy-MM-dd")" />
         <span asp-validation-for="Fecha" class="text-danger"></span>
     </div>
 

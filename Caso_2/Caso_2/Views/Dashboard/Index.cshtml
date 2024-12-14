@@ -8,7 +8,6 @@
     <h1 class="text-center mt-4">Dashboard</h1>
 
     <div class="row mt-5">
-        
         <div class="col-md-6 mb-4">
             <div class="card text-light shadow" style="background-color:#000000">
                 <div class="card-body text-center">
@@ -18,7 +17,6 @@
             </div>
         </div>
 
-        
         <div class="col-md-6 mb-4">
             <div class="card text-light shadow" style="background-color:#000000">
                 <div class="card-body text-center">
@@ -29,17 +27,60 @@
         </div>
     </div>
 
-    <div class="row mt-5">
-        <div class="col-md-12">
-            <div class=" text-light shadow" style="background-color:#000000">
-                <div class="card-body">
-                    <h5 class="card-title m-3 mt-2 p-3">Gráfico de Resumen</h5>
-                    <canvas id="dashboardChart" width="400" height="150"></canvas>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card text-light shadow" style="background-color:#000000">
+                <div class="card-body text-center">
+                    <h5 class="card-title" style="color:#ff05f3"><strong>Total de Inscritos @Model.MesAnioActual</strong></h5>
+                    <h2 class="display-4">@Model.TotalInscritosMes</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card text-light shadow" style="background-color:#000000">
+                <div class="card-body text-center">
+                    <h5 class="card-title" style="color:#4dfbca"><strong>Total de Categorias Activas</strong></h5>
+                    <h2 class="display-4">@Model.TotalCategorias</h2>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<div class="row mt-5">
+    <div class="col-md-12">
+        <div class=" text-light shadow" style="background-color:#000000">
+            <div class="card-body">
+                <h5 class="card-title m-3 mt-2 p-3">Gráfico de Resumen</h5>
+                <canvas id="dashboardChart" width="400" height="150"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-12">
+        <div class="card text-light shadow" style="background-color:#000000">
+            <div class="card-body">
+                <h5 class="card-title m-3 mt-2 p-3" style="color: #ffab00;">Top 5 eventos con más inscripciones</h5>
+                <ul class="list-group list-group-flush">
+                    @foreach (var evento in Model.TopEventos)
+                    {
+                        <li class="list-group-item bg-dark text-light">@evento</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  
+
 
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -48,16 +89,20 @@
         const dashboardChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Usuarios', 'Eventos'],
+                labels: ['Usuarios', 'Eventos','Inscripciones','Categorias'],
                 datasets: [{
                     label: 'Cantidad',
-                    data: [@Model.TotalUsuarios, @Model.TotalEventos],
+                    data: [@Model.TotalUsuarios, @Model.TotalEventos, @Model.TotalInscritosMes,@Model.TotalCategorias],
                     backgroundColor: [
                         'rgb(13, 202, 240)',
-                        'rgb(255, 193, 7)'
+                        'rgb(255, 193, 7)',
+                        'rgb(255, 5, 243)',
+                        'rgb(77, 251, 202)'
                     ],
                     borderColor: [
                         'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(255, 206, 86, 1)',
                         'rgba(255, 206, 86, 1)'
                     ],
                     borderWidth: 1
