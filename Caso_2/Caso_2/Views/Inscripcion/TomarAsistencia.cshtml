@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Caso_2.Models.Inscripcion>
+
+<h1 class="text-white">Tomar Asistencia: @ViewBag.EventoTitulo</h1>
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Nombre Completo</th>
+            <th>Correo</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var inscripcion in Model)
+        {
+            <tr id="row-@inscripcion.Id">
+                <td>@inscripcion.Usuario.NombreCompleto</td>
+                <td>@inscripcion.Usuario.Email</td>
+                <td id="estado-@inscripcion.Id">
+                    @if (inscripcion.Asistio)
+                    {
+                        <span class="badge bg-success">Presente</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Ausente</span>
+                    }
+                </td>
+                <td>
+                    <button class="btn btn-success btn-sm" onclick="cambiarAsistencia(@inscripcion.Id, true)">
+                        <i class="bi bi-check-circle"></i> Presente
+                    </button>
+                    <button class="btn btn-danger btn-sm" onclick="cambiarAsistencia(@inscripcion.Id, false)">
+                        <i class="bi bi-x-circle"></i> Ausente
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="EventosConInscritos" asp-controller="Eventos" class="btn btn-secondary">Volver a Eventos</a>
+
+<script>
+    function cambiarAsistencia(inscripcionId, estado) {
+        fetch('/Inscripcion/ActualizarAsistencia', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+            },
+            body: JSON.stringify({ inscripcionId: inscripcionId, estado: estado })
+        })
+        .then(response => {
+            if (response.ok) {
+                // Cambiar dinámicamente el estado en la tabla
+                const estadoElemento = document.getElementById(`estado-${inscripcionId}`);
+                if (estado) {
+                    estadoElemento.innerHTML = '<span class="badge bg-success">Presente</span>';
+                } else {
+                    estadoElemento.innerHTML = '<span class="badge bg-danger">Ausente</span>';
+                }
+            } else {
+                alert('Error al actualizar el estado.');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+</script>

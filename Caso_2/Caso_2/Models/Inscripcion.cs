@@ -20,5 +20,6 @@ namespace Caso_2.Models
 
         [Required]
         public DateTime FechaInscripcion { get; set; } = DateTime.Now;
+        public bool Asistio { get; set; } = false;
     }
 }

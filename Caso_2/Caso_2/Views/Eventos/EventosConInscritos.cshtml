@@ -24,6 +24,7 @@
                 <td>@evento.CupoMaximo</td>
                 <td>
                     <a asp-action="Inscritos" asp-controller="Inscripcion" asp-route-id="@evento.Id" class="btn btn-primary btn-sm">Ver Inscritos</a>
+                    <a asp-action="TomarAsistencia" asp-controller="Inscripcion" asp-route-id="@evento.Id" class="btn btn-success btn-sm">Tomar Asistencia</a>
                 </td>
             </tr>
         }

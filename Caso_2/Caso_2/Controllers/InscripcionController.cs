@@ -177,5 +177,84 @@ namespace Caso_2.Controllers
 
             return View(inscritos);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> TomarAsistencia(int id)
+        {
+            var evento = await _context.Eventos
+                .Include(e => e.Categoria)
+                .FirstOrDefaultAsync(e => e.Id == id);
+
+            if (evento == null)
+            {
+                return NotFound("El evento no existe.");
+            }
+
+            var inscritos = await _context.Inscripciones
+                .Where(i => i.EventoId == id)
+                .Include(i => i.Usuario)
+                .ToListAsync();
+
+            ViewBag.EventoTitulo = evento.Titulo;
+
+            return View(inscritos);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ActualizarAsistencia([FromBody] ActualizarAsistenciaRequest request)
+        {
+            if (request == null || request.InscripcionId <= 0)
+            {
+                return BadRequest("Solicitud inválida.");
+            }
+
+            var inscripcion = await _context.Inscripciones.FindAsync(request.InscripcionId);
+            if (inscripcion == null)
+            {
+                return NotFound("La inscripción no existe.");
+            }
+          
+            inscripcion.Asistio = request.Estado;
+
+            // Guardar cambios
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        public class ActualizarAsistenciaRequest
+        {
+            public int InscripcionId { get; set; }
+            public bool Estado { get; set; }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> TomarAsistencia(int id, List<int> asistentesIds)
+        {
+            // Obtener todas las inscripciones del evento
+            var inscripciones = await _context.Inscripciones
+                .Where(i => i.EventoId == id)
+                .ToListAsync();
+
+            // Marcar asistencia según los IDs seleccionados
+            foreach (var inscripcion in inscripciones)
+            {
+                if (asistentesIds.Contains(inscripcion.Id))
+                {
+                    inscripcion.Asistio = true; // Marcar como presente
+                }
+                else
+                {
+                    inscripcion.Asistio = false; // Marcar como ausente
+                }
+            }
+
+            // Guardar cambios en la base de datos
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Inscritos", new { id });
+        }
     }
 }
