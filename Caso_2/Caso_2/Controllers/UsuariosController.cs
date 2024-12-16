@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 
-[Authorize(Roles = "Administrador")]
+[Authorize]
 public class UsuariosController : Controller
 {
     private readonly UserManager<Usuario> _userManager;

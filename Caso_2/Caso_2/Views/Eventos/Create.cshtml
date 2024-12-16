@@ -24,10 +24,9 @@
         <select asp-for="CategoriaId" class="form-control bg-dark text-white" asp-items="ViewBag.CategoriaId"></select>
         <span asp-validation-for="CategoriaId" class="text-danger"></span>
     </div>
-
     <div class="form-group text-white">
         <label asp-for="Fecha" class="control-label text-white"></label>
-        <input asp-for="Fecha" type="date" class="form-control bg-dark text-white" />
+        <input asp-for="Fecha" type="date" class="form-control bg-dark text-white" id="fechaInput" />
         <span asp-validation-for="Fecha" class="text-danger"></span>
     </div>
 
@@ -64,3 +63,9 @@
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
 }
+<script>
+    
+    const today = new Date().toISOString().split('T')[0];
+    
+    document.getElementById('fechaInput').setAttribute('min', today);
+</script>

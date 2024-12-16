@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Caso_2.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -215,7 +215,8 @@ namespace Caso_2.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     EventoId = table.Column<int>(type: "int", nullable: false),
                     UsuarioId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    FechaInscripcion = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    FechaInscripcion = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Asistio = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -249,9 +250,9 @@ namespace Caso_2.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NombreCompleto", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "Rol", "SecurityStamp", "Telefono", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "1", 0, "7a9d4ba1-61c2-4120-b4d3-6cae26d83b62", "admin@example.com", true, false, null, "Administrador General", "ADMIN@EXAMPLE.COM", "ADMIN@EXAMPLE.COM", "AQAAAAIAAYagAAAAEEF8kpptON1iTVqjEy9dZEDXoibkZE6XqUSEjq/majhknmIEoUtC/SUcaaXsDHBhCA==", null, false, "Administrador", "b2b1b0cb-506f-474b-b341-4f980fd85563", "123456789", false, "admin@example.com" },
-                    { "2", 0, "75956723-c62e-4959-a44e-4ef67dd946a2", "organizador@example.com", true, false, null, "Organizador Evento", "ORGANIZADOR@EXAMPLE.COM", "ORGANIZADOR@EXAMPLE.COM", "AQAAAAIAAYagAAAAEOlC+taMTyLbKcB28IljDj4lXZ1DzcMDYp3YoVC0tfL2QgKoqkrzwlg8oFZMo6jS/Q==", null, false, "Organizador", "7e949058-ea10-4aca-8025-2a00ef164b62", "987654321", false, "organizador@example.com" },
-                    { "3", 0, "984cd5aa-fbbb-4dfb-bda5-3e5950a98b07", "usuario@example.com", true, false, null, "Usuario Regular", "USUARIO@EXAMPLE.COM", "USUARIO@EXAMPLE.COM", "AQAAAAIAAYagAAAAENxqllBRI+4TlcqR/8SVdQDxqIzqsm2J3ru+vzSzveb3pYbPEkteERB3PE2CN6Ipfg==", null, false, "Usuario", "def971b9-1dc7-4c02-8150-2598c3f5e6a5", "1122334455", false, "usuario@example.com" }
+                    { "1", 0, "67b150f4-c77e-4f84-b17b-c6e9d52f51c1", "admin@example.com", true, false, null, "Administrador General", "ADMIN@EXAMPLE.COM", "ADMIN@EXAMPLE.COM", "AQAAAAIAAYagAAAAEBjuoCcKmgij8an848XZUC8QbMVLWH399ZVgFju75Cmu6zbkmtDgfURDU7H7JpcEjA==", null, false, "Administrador", "83cbe3dc-a74c-4b6b-b51e-d0bfd40ce522", "123456789", false, "admin@example.com" },
+                    { "2", 0, "fb0e737d-dd64-4484-ae25-8b916911f695", "organizador@example.com", true, false, null, "Organizador Evento", "ORGANIZADOR@EXAMPLE.COM", "ORGANIZADOR@EXAMPLE.COM", "AQAAAAIAAYagAAAAEH/7OlbUW43sfiOJl6yNB3K5K3CsiV5KFr0tlK5UkNBiaLZhIAdz47K1Ou9FcKXyeg==", null, false, "Organizador", "dcf9a056-55ce-4dc0-aca2-75ddde2e4c6c", "987654321", false, "organizador@example.com" },
+                    { "3", 0, "88c8664a-16c7-47cb-bd9e-37bf27d1dfc4", "usuario@example.com", true, false, null, "Usuario Regular", "USUARIO@EXAMPLE.COM", "USUARIO@EXAMPLE.COM", "AQAAAAIAAYagAAAAEJ3ium0L84ZpiDjqEOzUP2y6aG0YZEFvzauEHb1uxbdeYHj9fV/UIe5ojZNndut7ww==", null, false, "Usuario", "842ca6de-e3af-42eb-a7ca-9a52d08ab296", "1122334455", false, "usuario@example.com" }
                 });
 
             migrationBuilder.InsertData(

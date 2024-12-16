@@ -1,11 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Caso_2.Models;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Caso_2.Controllers
 {
-    [Authorize(Roles = "Administrador")]
     public class AccountController : Controller
     {
         private readonly SignInManager<Usuario> _signInManager;
