@@ -1,9 +1,11 @@
 ﻿using Caso_2.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Caso_2.Controllers
 {
+    [Authorize(Roles = "Administrador,Organizador")]
     public class CategoriaController : Controller
     {
         private readonly CasoContext _context;

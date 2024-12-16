@@ -1,9 +1,11 @@
 ﻿using Caso_2.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
+[Authorize(Roles = "Administrador,Organizador")]
 public class EventosController : Controller
 {
     private readonly CasoContext _context;

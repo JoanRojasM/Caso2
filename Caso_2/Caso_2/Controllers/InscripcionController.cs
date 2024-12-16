@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Caso_2.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Administrador,Usuario")]
     public class InscripcionController : Controller
     {
         private readonly CasoContext _context;

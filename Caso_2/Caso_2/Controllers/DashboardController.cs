@@ -2,9 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Caso_2.Models;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Caso_2.Controllers
 {
+    [Authorize(Roles = "Administrador,Organizador")]
     public class DashboardController : Controller
     {
         private readonly CasoContext _context;
